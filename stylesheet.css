@@ -1,0 +1,240 @@
+/* orange #ff6600 */
+
+body {
+    position: relative;
+    font-family: Calibri, sans;
+    font-size : 14px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+div.Flex {
+    display: flex;
+}
+
+div.Flex.between {
+    justify-content: space-between;
+}
+
+header {
+    background: transparent linear-gradient(45deg, #005aa3 0%, #002a77 70%) 0 0 no-repeat padding-box;
+/*    background: transparent linear-gradient(45deg, #ff6700 0%, #aa17af 70%) 0 0 no-repeat padding-box;*/
+    color : #ffffff;
+    /*     background-color: #b5d2ec7d;
+    color : #002060; */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 5mm;
+    margin: 10mm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.subpage {
+    height: 287mm;
+/*    padding: 5mm;
+     border: 5px #3D75DB solid;
+    outline: 5mm #b5d2ec solid; */
+}
+
+div.left {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: solid 1px #b5d2ec59;
+    flex-shrink: 0.8;
+}
+
+div.logo {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top : 3px;
+}
+
+div.icons {
+    width: 25px;
+}
+
+div.icons.big {
+    width: 35px;
+}
+
+div.text {
+    margin-bottom: 15px;
+}
+
+div.nomargin {
+    margin: 0;
+}
+
+ul {
+    list-style-type: "- ";
+    padding: 0;
+    padding-left: 8px;
+    margin: 0;
+}
+
+.nomargintop {
+    margin-top: 0;
+}
+
+.marginbottom {
+    margin-bottom: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+div.comp {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.wrap {
+    flex-wrap: wrap;
+    align-items: center;
+    width: 160px;
+    justify-content: space-evenly;
+}
+
+/***************
+**** TEXT
+***************/
+
+h1 {
+    color : #002060;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 17px;
+    width: 100%;
+    color : #ffffff;
+    background-color: #b5d2ec;
+    /* color : #002060;
+    background: transparent linear-gradient(90deg, #b5d2ec 20%, #ffffff 100%) 0 0 no-repeat padding-box; */
+    background: transparent linear-gradient(45deg, #8ab4e1 0%, #005aa3 70%) 0 0 no-repeat padding-box;
+/*    background: transparent linear-gradient(45deg, #ff8939 40%, #ffb739 100%) 0 0 no-repeat padding-box;*/
+    padding: 7px 15px 5px 15px;
+    border-radius: 15px;
+}
+
+/* div.right h2 {
+    position: relative;
+    left: -14px;
+} */
+
+h3 {
+    color : #002060;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+div.right h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-top : 3px;
+}
+
+.blue {
+    color : #002060;
+}
+
+.lightblue {
+    color : #b5d2ec;
+}
+
+/***************
+**** IMAGES
+***************/
+
+img.identite {
+    width: 130px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+div.logo img {
+    height: auto;
+    max-height: 30px;
+    max-width: 70%;
+}
+
+div.logo img.large {
+    max-width: 100%;
+}
+
+div.logo img.tall {
+    max-height: 50px;
+}
+
+div.logo img.small {
+    max-height: 25px;
+}
+
+div.icons img {
+    max-height: 1.8rem;
+    max-width: 1.3rem;
+    position: relative;
+    top: 1px;
+/*     filter: drop-shadow(1px 1px 1px #00000040); */
+    margin-right: 3px;
+}
+
+div.icons.big img {
+    max-width: 2.3rem;
+    margin-top: 3px;
+}
+
+div.comp img {
+    width: 80%;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;        
+    }
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
