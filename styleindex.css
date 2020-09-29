@@ -1,9 +1,9 @@
 body {
     position: relative;
-    font-family: Calibri, sans;
+    font-family: Consolas, 'Courier New', monospace;
     font-size : 14px;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #FAFAFA;
@@ -18,49 +18,78 @@ body {
     text-align: center;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.principal {
+    width: 100vw;
+}
+
+.card {
+    margin: 1rem;
+    background: white;
+    box-shadow: 2px 4px 10px #0000001a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .2s linear;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project .card {
+    width: 234px;
+}
+
+.card:hover {
+    box-shadow: 2px 8px 25px #00000026;
+    transform: translate3D(0, -2px, 0);
+}
 
 /***************
 **** TEXT
 ***************/
-
-h1 {
-    color : #002060;
-    margin-bottom: 0;
-}
-
-h2 {
-    font-size: 17px;
-    width: 100%;
-    color : #ffffff;
-    background-color: #b5d2ec;
-    background: transparent linear-gradient(45deg, #8ab4e1 0%, #005aa3 70%) 0 0 no-repeat padding-box;
-    padding: 7px 15px 5px 15px;
-    border-radius: 15px;
-}
-
-/* div.right h2 {
-    position: relative;
-    left: -14px;
-} */
-
-h3 {
-    color : #002060;
-    margin-bottom: 0;
-    font-size: 14px;
-}
-
-div.right h3 {
-    font-weight: normal;
-    margin: 0;
-}
-
 p {
-    margin: 0;
-    margin-top : 3px;
+    padding: 0 1rem;
 }
 
-.lightblue {
-    color : #b5d2ec;
+.card h1 {
+    text-align: center;
+    padding: 1rem 1rem;
+    background: #074170;
+    margin: 0 0 0 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.project .card h1 {
+    background: #0159a2;
+}
+
+.project .card:hover h1{
+    background: transparent linear-gradient(150deg, #0159a2 40%, #8D3589 100%) 0 0 no-repeat padding-box;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+.blue {
+    color : #005aa3;
+    font-weight: bolder;
 }
 
 @page {
