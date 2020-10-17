@@ -25,6 +25,23 @@ body {
     background-color: #FAFAFA;
 }
 
+.contacts {
+    display: flex;
+/*     position: absolute;
+    top: 5px;
+    right: 5px; */
+}
+
+.relative {
+    position: relative;
+}
+
+.over {
+    position : absolute;
+    top: 0;
+    right : 0;
+}
+
 .center {
     text-align: center;
 }
@@ -54,10 +71,28 @@ body {
     overflow: hidden;
     transition: all .2s linear;
     width: 500px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+}
+
+.relative img {
+    width: 50px;
+    margin: 5px;
+}
+
+.relative>img {
+    filter: drop-shadow(1px 1px 0px #00000075);
+}
+
+.relative:hover {
+    transform: translate3D(0, -1px, 0);
+}
+
+.relative:hover div img {
+    filter: drop-shadow(1px 1px 0px #0000008e);
+}
+
+.relative:active {
+    transform: translate3D(0, 1px, 0);
 }
 
 .project .card {
@@ -87,6 +122,10 @@ p {
 
 .project .card h1 {
     background: #0159a2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project .card:hover h1,
@@ -97,13 +136,10 @@ p {
 a {
     color:white;
     text-decoration: none;
+    height: 100%;
 }
 
 .blue {
     color : #005aa3;
     font-weight: bolder;
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
