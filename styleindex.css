@@ -18,15 +18,9 @@ body {
     /* position: relative; */
     font-family: Consolas, 'Courier New', monospace;
     font-size : 14px;
-    width: 100vw;
-    height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #FAFAFA;
-}
-
-.contacts {
-    display: flex;
+    min-height: 100vh;
 }
 
 .relative {
